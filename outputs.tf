@@ -1,4 +1,4 @@
-output "deployment_guide" {
+output "deployment_commands" {
   value = <<EOT
   You might want to upload website files to the S3 bucket and then deploy the website using the CloudFront distribution.
   Move to the website directory and run the following commands:
