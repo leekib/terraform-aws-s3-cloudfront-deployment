@@ -5,7 +5,12 @@ resource "aws_cloudfront_origin_access_identity" "this" {
 resource "aws_cloudfront_distribution" "this" {
   enabled             = true
   default_root_object = var.default_root_object
-
+  custom_error_response {
+    error_caching_min_ttl = 10
+    error_code            = 403
+    response_code         = 200
+    response_page_path    = "/index.html"
+  }
   origin {
     domain_name = aws_s3_bucket.this.bucket_regional_domain_name
     origin_id   = "s3-origin"
