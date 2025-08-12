@@ -13,7 +13,7 @@ You can use the output `deployment_commands` to get the commands to do this.
 ## Usage example
 ```hcl
 module "deployment" {
-  source              = "github.com/2012160085/terraform-aws-s3-cloudfront-deployment"
+  source              = "github.com/leekib/terraform-aws-s3-cloudfront-deployment"
   domain              = "www.my-domain.com"
   hosted_zone_name    = "my-domain.com"
   s3_bucket_name      = "my-bucket"
